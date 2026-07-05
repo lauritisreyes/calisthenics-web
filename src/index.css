@@ -1,0 +1,94 @@
+/* Minimal monochrome palette: black/white/grey scale, Palo's primary gold kept as the
+   single accent (buttons, links, logo). These tokens are the source of truth for the
+   design system. */
+:root {
+  --color-background: #ffffff;
+  --color-on-background: #16171b;
+  --color-surface-variant: #f2f3f6;
+  --color-on-surface-variant: #52565e;
+
+  --color-outline-variant: #e5e6ea;
+
+  --color-accent: #775a0b;
+  --color-on-accent: #ffffff;
+
+  --font-display: 'AR One Sans', system-ui, sans-serif;
+  --font-body: 'AR One Sans', system-ui, sans-serif;
+
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #16171b;
+    --color-on-background: #f2f3f6;
+    --color-surface-variant: #202227;
+    --color-on-surface-variant: #a3a7b0;
+
+    --color-outline-variant: #2c2e34;
+
+    --color-accent: #e8c26c;
+    --color-on-accent: #16171b;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}

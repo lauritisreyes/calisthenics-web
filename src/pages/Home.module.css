@@ -1,0 +1,49 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-8);
+  gap: var(--space-7);
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Phone-shaped media slot for the hero video. While public/videos/ is empty
+   the surface-variant background stands in as the placeholder. */
+.media {
+  width: 280px;
+  max-width: 70vw;
+  aspect-ratio: 9 / 19.5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-variant);
+}
+
+.videoLight,
+.videoDark {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Light video by default; swap to the dark variant under a dark theme. */
+.videoDark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .videoLight {
+    display: none;
+  }
+
+  .videoDark {
+    display: block;
+  }
+}

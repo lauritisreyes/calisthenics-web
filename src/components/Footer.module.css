@@ -1,0 +1,25 @@
+.footer {
+  margin-top: auto;
+  padding: var(--space-6) var(--space-4);
+  max-width: 960px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.links a {
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.links a:hover {
+  color: var(--color-on-background);
+}
