@@ -1,8 +1,10 @@
+import { BackLink } from '../components/BackLink'
 import styles from '../components/LegalPage.module.css'
 
 export function DataDeletion() {
   return (
     <div className={styles.wrapper}>
+      <BackLink />
       <h1>Delete Your Data</h1>
       <p className={styles.updated}>Last updated: July 4, 2026</p>
 

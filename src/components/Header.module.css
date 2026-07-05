@@ -1,24 +1,11 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: var(--space-4);
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-on-background);
-}
-
-.brand img {
-  height: 32px;
-  width: auto;
-  display: block;
 }
 
 .download {

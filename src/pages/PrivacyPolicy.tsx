@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import { BackLink } from '../components/BackLink'
 import styles from '../components/LegalPage.module.css'
 
 export function PrivacyPolicy() {
   return (
     <div className={styles.wrapper}>
+      <BackLink />
       <h1>Privacy Policy</h1>
       <p className={styles.updated}>Last updated: July 4, 2026</p>
 

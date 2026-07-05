@@ -10,8 +10,8 @@ training Android app developed in the sibling repo `../calisthenics`
 (`com.laura.calisthenics`). It's a static React + TypeScript site (Vite), currently
 scoped to:
 
-- A single, deliberately minimal landing page: one headline, one phone-shaped hero
-  video, one download link — no carousels, feature grids, or extra sections.
+- A single, deliberately minimal landing page: a large "PALO" wordmark hero, one
+  tagline, one download link — no carousels, feature grids, or extra sections.
 - Two Play Store–required legal pages: Privacy Policy and Data Deletion.
 
 More sections (blog, changelog, i18n, etc.) may be added later — don't over-build for
@@ -49,7 +49,6 @@ src/
   constants.ts  Shared values (e.g. PLAY_STORE_URL)
   index.css     Design tokens (CSS custom properties) + global resets
   App.tsx       HashRouter + route table
-public/videos/        Hero videos (light/dark), plus a README with specs
 .claude/
   launch.json   Dev server config for the preview tool
   skills/       Project-scoped skills (see below)
@@ -67,12 +66,12 @@ public/videos/        Hero videos (light/dark), plus a README with specs
 - **Content accuracy**: the Privacy Policy and Data Deletion pages make factual claims
   about the Android app's data handling — cross-check against `../calisthenics` before
   editing them, don't invent data practices.
-- **Brand wordmark**: the header uses a plain "PALO" text wordmark (uppercase,
-  letter-spaced) — there is no logo image/SVG. If a graphical logo is wanted later,
-  re-export the path data from the Android app's `palo.xml` vector drawable.
-- **Hero video**: the home page shows a phone-shaped `<video>` with separate light and
-  dark variants, swapped via `prefers-color-scheme`. Files live in `public/videos/`
-  (`hero-light.*` / `hero-dark.*`) — see `public/videos/README.md` for specs.
+- **Brand wordmark**: written as the literal string `PAL0` (digit zero, not the letter
+  O), mirroring the dotted-zero glyph in the Android app's `palo.xml` vector
+  drawable/logo. It appears once, as the Home hero `<h1>` (with `aria-label="Palo"` for
+  screen readers) — the header has no logo, just the "download" link.
+- **Hero**: the home page shows the large `PAL0` wordmark (`--color-accent`,
+  `clamp()`-scaled font size) with one tagline line below it — no image or video.
 
 ## Deployment
 

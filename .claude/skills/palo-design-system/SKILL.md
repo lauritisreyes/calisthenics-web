@@ -22,14 +22,17 @@ matter most while coding:
   whitespace, not less — this is a sparse, editorial layout, not a dense dashboard.
 - **CSS Modules**, one per component (`Component.module.css` next to `Component.tsx`).
   No global utility-class framework, no CSS-in-JS.
-- **Brand wordmark**: the header uses a plain "PALO" text wordmark (uppercase,
-  letter-spaced) — there is no logo image. If a graphical logo is needed later, re-export
-  the path data from the Android app's `palo.xml` vector drawable.
-- **Layout stays sparse**: Header is just the "PALO" wordmark + one lowercase "download"
-  link (no nav items). Home is headline + one phone-shaped hero `<video>` (light/dark
-  variants in `public/videos/`, swapped by `prefers-color-scheme`) — no carousels,
-  feature grids, secondary CTAs, or extra sections unless explicitly asked for. Footer is
-  exactly three links: privacy policy, delete your data, contact.
+- **Brand wordmark**: written as the literal string `PAL0` (digit zero, not the letter
+  O) — this mirrors the dotted-zero glyph in the Android app's `palo.xml` vector
+  drawable/logo. It only appears once, as the Home hero `<h1>`; give it
+  `aria-label="Palo"` so screen readers announce the real word. There is no logo image
+  and no separate wordmark in the header.
+- **Layout stays sparse**: Header is just one lowercase "download" link, right-aligned
+  (no logo, no nav items — the brand lives in the Home hero, not the header). Home is a
+  centered hero: the large `PAL0` wordmark (`--color-accent`, `clamp()`-scaled display
+  size) + one tagline line below it — no phone video, carousels, feature grids,
+  secondary CTAs, or extra sections unless explicitly asked for. Footer is exactly three
+  links: privacy policy, delete your data, contact.
 
 ## Auto-update rule
 
