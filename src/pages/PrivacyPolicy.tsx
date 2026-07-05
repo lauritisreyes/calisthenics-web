@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from '../components/LegalPage.module.css'
 
 export function PrivacyPolicy() {
@@ -44,8 +45,8 @@ export function PrivacyPolicy() {
         You can permanently delete your account and all associated cloud data
         (workouts, goals, and profile info) at any time from Settings → My data →
         Delete account inside the app. See our{' '}
-        <a href="/data-deletion">data deletion page</a> for details and an alternative
-        way to request deletion if you no longer have the app installed.
+        <Link to="/data-deletion">data deletion page</Link> for details and an
+        alternative way to request deletion if you no longer have the app installed.
       </p>
 
       <h2>Contact</h2>

@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.brand}>
-        <img src="/logo.png" alt="Palo" />
+        <img src="logo.png" alt="Palo" />
       </Link>
       <a className={styles.download} href={PLAY_STORE_URL}>
         download
