@@ -12,12 +12,15 @@
   gap: var(--space-4);
 }
 
-.wordmark {
-  font-size: clamp(4.5rem, 20vw, 13rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-accent);
+.logo {
+  width: clamp(6rem, 24vw, 13rem);
+  height: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert(1);
+  }
 }
 
 .tagline {
