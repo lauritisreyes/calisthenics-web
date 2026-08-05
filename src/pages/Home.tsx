@@ -4,8 +4,8 @@ export function Home() {
   return (
     <section className={styles.hero}>
       <img
-        className={styles.logo}
-        src={`${import.meta.env.BASE_URL}logo.svg`}
+        className={styles.image}
+        src={`${import.meta.env.BASE_URL}hand-stand-calendar.png`}
         alt="Palo"
         width={512}
         height={512}
