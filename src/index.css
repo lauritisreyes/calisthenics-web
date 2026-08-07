@@ -27,21 +27,8 @@
   --space-7: 64px;
   --space-8: 96px;
 
-  color-scheme: light dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #16171b;
-    --color-on-background: #f2f3f6;
-    --color-surface-variant: #202227;
-    --color-on-surface-variant: #a3a7b0;
-
-    --color-outline-variant: #2c2e34;
-
-    --color-accent: #e8c26c;
-    --color-on-accent: #16171b;
-  }
+  /* Light only — the site never follows the OS dark preference. */
+  color-scheme: light only;
 }
 
 * {
